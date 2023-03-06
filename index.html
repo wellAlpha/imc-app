@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   </head>
   <body>
     <section class="hero is-primary">
@@ -22,44 +23,44 @@
       <div class="tile is-ancestor">
         <div class="tile is-3 is-vertical is-parent">
           <div class="tile is-child box">
+            <h1 class="title is-5">Cadastro</h1>
+            <form action="">
+              <div class="field">
+                <label class="label">Nome</label>
+                <div class="control">
+                  <input id="nome" class="input is-primary" type="text" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Peso[KG]</label>
+                <div class="control">
+                  <input id="peso" class="input is-primary" type="number" min="1" max="600" step="5" value="1" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Altura[M]</label>
+                <div class="control">
+                  <input id="altura" class="input is-primary" type="number" min="0.20" max="2.30" step="0.10" value="0.50" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Gordura Corporal[%]</label>
+                <div class="control">
+                  <input id="indice-gordura" class="input is-primary" type="number" min="1" max="35" value="1" />
+                </div>
+              </div>
+              <div class="control">
+                <button id="btn-submit" class="button is-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="tile is-child box">
             <div class="field">
                 <label class="label">Search</label>
                 <div class="control">
                   <input required class="input is-primary" type="text" />
                 </div>
               </div>
-          </div>
-          <div class="tile is-child box">
-            <h1 class="title is-5">Cadastro</h1>
-            <form action="">
-              <div class="field">
-                <label class="label">Nome</label>
-                <div class="control">
-                  <input required class="input is-primary" type="text" />
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Peso</label>
-                <div class="control">
-                  <input required class="input is-primary" type="text" />
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Altura</label>
-                <div class="control">
-                  <input required class="input is-primary" type="text" />
-                </div>
-              </div>
-              <div class="field">
-                <label class="label">Gordura Corporal[%]</label>
-                <div class="control has-icons-right">
-                  <input required class="input is-primary" type="text" />
-                </div>
-              </div>
-              <div class="control">
-                <button class="button is-primary">Submit</button>
-              </div>
-            </form>
           </div>
         </div>
         <div class="tile is-parent is-9">
@@ -91,5 +92,7 @@
         </div>
       </div>
     </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
